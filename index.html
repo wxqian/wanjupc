@@ -41,6 +41,41 @@
             left:-30px;
             right:auto;
         }
+
+        .vertical-tab {
+            width: 100px;
+            height: 100%;
+            float: left;
+            overflow: hidden;
+        }
+
+        .vertical-tab > li {
+            text-align: center;
+        }
+
+        .vertical-tab > li.active > a, .vertical-tab > li.active > a:focus, .vertical-tab > li.active > a:hover {
+            border: solid #ccc;
+            border-width: 1px 0px 1px 1px;
+            background-color: #ffffff;
+            border-right: 1px solid #ffffff;
+            z-index: 2;
+        }
+
+        .vertical-tab > li > a {
+            border-radius: 4px 0px 0px 4px;
+        }
+
+        .vertical-tab-content {
+            float: left;
+            width: 90%;
+            height: 100%;
+            padding: 5px;
+            margin-left: -1px;
+            margin-bottom: 2px;
+            border-radius: 4px 4px 4px 4px;
+            border: solid 1px #ccc;
+            color: #666;
+        }
     </style>
 </head>
 <body>
@@ -118,6 +153,41 @@
             <img src="images/more.png" />
         </a>
     </div>
+    <br />
+    <div style="background-image:url('images/myTab.png');" class="text-center">
+        <ul class="nav nav-tabs" id="myTab">
+            <li><a href="#rentFlow">租赁流程</a></li>
+            <li><a href="#normalQuestion">常见问题</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane" id="rentFlow">
+                <img src="images/flow.png" />
+            </div>
+            <div class="tab-pane" id="normalQuestion">
+                <ul class="nav nav-tabs nav-pills" id="questionTab">
+                    <li><a href="#question1" data-toggle="pill">租赁流程</a></li>
+                    <li><a href="#question2">常见问题</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div id="question1">aasa</div>
+                    <div id="question2">aasa</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color:#3c3c3c;" class="container">
+        <div class="col-md-6 text-center">
+            <span>Copyright &copy; 2013 ChineseDesign Co.Ltd All Rights Reserved</span><br />
+            <span>版权所有 &copy; 上海尚器设计创意有限公司 保留所有权利</span><br />
+            <span>沪ICP备11016142号</span>
+        </div>
+        <div class="col-md-6 text-left">
+            <ul></ul>
+        </div>
+    </div>
+
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -142,6 +212,15 @@
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
     });
+
+    $(function () {
+        $('#myTab a:first').tab('show');//初始化显示哪个tab
+
+        $('#myTab a').click(function (e) {
+            e.preventDefault();//阻止a链接的跳转行为
+            $(this).tab('show');//显示当前选中的链接及关联的content
+        })
+    })
 </script>
 </body>
 </html>
