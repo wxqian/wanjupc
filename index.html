@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>玩聚PC</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        span.swiper-pagination-bullet{
+            background: white;
+        }
+
+        span.swiper-pagination-bullet-active{
+            background: yellow;
+        }
+        /* /*}*/
+
+        .swiper-containerV{
+            width:60%;
+        }
+        .swiper-containerV .swiper-wrapper{
+            width:80%;
+        }
+        .button-next{
+            background-image: url('images/next.png');
+            right:30px;
+            left:auto;
+            opacity: 1;
+        }
+        .button-prev{
+            background-image: url('images/prev.png');
+            left:-30px;
+            right:auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="padding-top:2px ;">
+                    <img alt="玩聚租租" src="images/logo.png" style="height:46px;"/>
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/#">我要乐高</a></li>
+                    <li><a href="/#">关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- swipe -->
+    <div class="swiper-container swiper-containerH">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/banner.png" />
+            </div>
+            <div class="swiper-slide">
+                <img src="images/banner.png" />
+            </div>
+            <div class="swiper-slide">
+                <img src="images/banner.png" />
+            </div>
+            <div class="swiper-slide">
+                <img src="images/banner.png" />
+            </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <div class="text-center">
+        <a href="#"><img src="images/wylg.png"></a>
+    </div>
+
+    <br />
+    <img src="images/fgx.png">
+    <div class="text-center">
+        <span class="text-success" style="font-size: 30px;font-weight: bold;">热门玩具</span>
+    </div>
+
+    <div class="text-center">
+        <div class="swiper-container swiper-containerV">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/tempo.png" /></div>
+                <div class="swiper-slide"><img src="images/city.png" /></div>
+                <div class="swiper-slide"><img src="images/eidolon.png" /></div>
+            </div>
+            <div class="swiper-button-next button-next"></div>
+            <div class="swiper-button-prev button-prev"></div>
+        </div>
+    </div>
+
+    <br />
+    <br />
+    <div class="text-center">
+        <a href="#">
+            <img src="images/more.png" />
+        </a>
+    </div>
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/swiper.js"></script>
+<script type="text/javascript">
+    var hSwiper = new Swiper('.swiper-containerH', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 30
+    });
+
+    var vSwiper = new Swiper('.swiper-containerV', {
+        slidesPerView: 3,
+//        centeredSlides: true,
+        spaceBetween: 30,
+//        loop: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
+</script>
+</body>
+</html>
