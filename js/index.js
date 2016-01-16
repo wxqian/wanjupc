@@ -12,14 +12,13 @@ $(function(){
             _this = this;
         $(_this).addClass("active").siblings().removeClass("active");
         if(t_index == 0){
-            $(".i-e-question").show();
-            $(".i-e-zulin").hide();
-        }else{
-            $(".i-e-question").hide();
             $(".i-e-zulin").show();
+            $(".i-e-question").hide();
+        }else{
+            $(".i-e-zulin").hide();
+            $(".i-e-question").show();
         }
     });
-
 
     $(".i-e-q-lf li").on("mouseenter",function(){
 
