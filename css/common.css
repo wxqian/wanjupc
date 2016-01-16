@@ -1,0 +1,236 @@
+body, p, ul, li, h1, h2, h3, h4, h5, h6, b, input, option, dl, dd, dt, i, em, b {
+    font-style: normal;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-size: 100%;
+    background: none;
+    font-weight: normal;
+    outline: none;
+
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+}
+
+a, a:hover, a:active, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.mg-top {
+    margin-top: 20px;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.clear-float {
+}
+
+.clear-float:after {
+    content: "";
+    height: 0;
+    display: block;
+    clear: both;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+::-webkit-input-placeholder {
+    font-size: 1em;
+    color: #a9a9a9;
+    padding-top: 0.1em;
+}
+
+.full-width {
+    width: 100%;
+}
+
+
+
+/*header-footer*/
+
+.header{
+    width: 100%;
+    height: 100px;
+    background: rgba(255,255,255,.9);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#C9ffffff,endcolorstr=#C9ffffff);
+    border-bottom: 1px solid #cccccc;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    /*overflow: hidden;*/
+}
+.header .h-in{
+    width: 1210px;
+    margin: 0 auto;
+    /*overflow: hidden;*/
+}
+.header .h-logo{
+    width: 227px;
+    height: 76px;
+    background: url("../images/logo.png") left center no-repeat;
+    background-size: 100% 100%;
+    float: left;
+    margin: 12px 0 0 30px;
+}
+.header .h-nav-list{
+    padding: 45px 35px 0 0;
+    float: right;
+}
+.header .h-nav-list ul{}
+.header .h-nav-list ul li{
+    float: left;
+    margin: 0 15px;
+}
+.header .h-nav-list ul li a{
+    color: #999999;
+    font-size: 18px;
+}
+.header .h-in .h-head{
+    position: relative;
+    margin: 30px 30px 0 0;
+    float: right;
+}
+.header .h-in .h-head span.h-h-img{
+    float: left;
+
+}
+.header .h-in .h-head a.h-h-name{
+    padding-right:20px;
+    float: left;
+    display: block;
+    margin: 12px 0 0 20px;
+    background: url("../images/i-arow.png") right center no-repeat;
+    cursor: pointer;
+    color: #336600;
+}
+.header .h-in .h-head ul.h-h-nav-list{
+    width: 145px;
+    height: 112px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 10;
+    background-color: #edeaea;
+    overflow: hidden;
+}
+.header .h-in .h-head ul.h-h-nav-list li{
+    width: 100%;
+    height: 58px;
+    float: left;
+    text-align: center;
+    line-height: 58px;
+    color: #999999;
+    cursor: pointer;
+    font-size: 18px;
+    border-bottom: 1px solid #cccccc;
+}
+.header .h-in .h-head ul.h-h-nav-list li:hover{
+    color: #339900;
+}
+
+/*公共底部*/
+.footer{
+    width: 100%;
+    height: 125px;
+    background-color: #333333;
+}
+.footer .footer-in{
+    width: 1210px;
+    margin: 0 auto;
+}
+.footer .footer-in .footer-lf{
+    margin: 30px 0 0 10px;
+    float: left;
+}
+.footer .footer-in .footer-lf p{
+    color: #bcbcbc;
+    font-size: 14px;
+    line-height: 25px;
+}
+.footer .footer-in .footer-rt{
+    margin: 55px 10px 0 0;
+    float: right;
+}
+.footer .footer-in .footer-rt ul li{
+    text-indent: 1em;
+    background: url("../images/footer-dot.png") left center no-repeat;
+    margin: 0 20px;
+    float: left;
+    color: #898989;
+}
+/*漂浮*/
+.con-float{
+    width: 190px;
+    height: 114px;
+    position: fixed;
+    right: 20px;
+    bottom: 200px;
+    z-index: 999;
+    background: url("../images/float.png") center no-repeat;
+}
+.con-float a.float-num{
+    width: 130px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 20px;
+    text-align: center;
+    line-height: 50px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.con-float a.float-phone{
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+.con-float a.float-top{
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+/*点击购物车*/
+.buy-car{
+    width: 108px;
+    height: 58px;
+    position: fixed;
+    right: 0;
+    top: 200px;
+    background: url("../images/buy-car.png") center no-repeat;
+    z-index: 9999;
+}
+.buy-car a.buy-car-click{
+    width: 108px;
+    height: 58px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
