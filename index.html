@@ -46,6 +46,8 @@
         </div>
         <div class="pagination"></div>
     </div>
+        <a class="i-banner-lt" id="i-ban-pre"><img src="images/i-banner-arrL.png"></a>
+        <a class="i-banner-rt" id="i-ban-next"><img src="images/i-banner-arrR.png"></a>
     </div>
 
     <div class="i-middle">
@@ -175,6 +177,12 @@
             pagination : '.banner .pagination',
             paginationClickable :true
             //其他设置
+        });
+        $(".i-banner-lt").click(function(){
+            mySwiper.swipePrev();
+        });
+        $(".i-banner-rt").click(function(){
+            mySwiper.swipeNext();
         });
     })
 </script>

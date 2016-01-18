@@ -61,10 +61,12 @@ a, a:hover, a:active, a:visited {
 .full-width {
     width: 100%;
 }
+.h100{
+    width: 100%;
+    height: 100px;
+}
 
 
-
-/*header-footer*/
 
 .header{
     width: 100%;
@@ -99,6 +101,13 @@ a, a:hover, a:active, a:visited {
 .header .h-nav-list ul li{
     float: left;
     margin: 0 15px;
+    height: 52px;
+}
+.header .h-nav-list ul li.active{
+    border-bottom: 3px solid #339900;
+}
+.header .h-nav-list ul li.active a{
+    color: #339900;
 }
 .header .h-nav-list ul li a{
     color: #999999;

@@ -1,0 +1,157 @@
+.l-contain{
+    width: 1210px;
+    margin: 0 auto;
+}
+.l-tit{
+    width: 100%;
+    height: 85px;
+    border-bottom: 1px solid #d5d5d5;
+}
+.l-tit h3{
+    width: 135px;
+    float: left;
+    font-size: 30px;
+    color: #336600;
+    margin: 30px 0 0 30px;
+}
+.l-tit div.l-search{
+    width: 285px;
+    height: 50px;
+    float: right;
+    background: url("../images/l-search.png") center no-repeat;
+    margin: 20px 30px 0 0;
+}
+.l-tit div.l-search input.l-s-input{
+    width: 210px;
+    height: 50px;
+    margin-left: 10px;
+    display: block;
+    line-height: 45px;
+    text-indent: 1em;
+    float: left;
+    font-size: 14px;
+}
+.l-tit div.l-search button.l-go-to-search{
+    width: 55px;
+    height: 55px;
+    background: none;
+    border: none;
+    float: right;
+    outline: none;
+}
+.l-catena{
+    width: 1210px;
+    margin: 0 auto;
+}
+.l-in{
+    padding: 15px 30px;
+    overflow: hidden;
+
+}
+.l-in h3{
+    width: 130px;
+    float: left;
+    display: inline;
+    color: #336600;
+    font-size: 22px;
+    padding-right: 20px;
+}
+.l-in a.l-all{
+    display: block;
+    float: left;
+    margin-right: 30px;
+    cursor: pointer;
+    line-height: 25px;
+    color: #666666;
+}
+.l-in .l-in-list{
+    float: left;
+    width: 935px;
+}
+.l-in .l-in-list a{
+    display: block;
+    float: left;
+    margin-bottom: 10px;
+    padding: 0 15px;
+    cursor: pointer;
+    line-height: 25px;
+    color: #666666;
+}
+
+.l-in a.active{
+    color:#336600
+}
+.l-defaultSort{
+    width: 1155px;
+    height: 45px;
+    margin: 0 auto 20px;
+    background-color: #eaeaea;
+    overflow: hidden;
+}
+.l-defaultSort h3{
+    float: left;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+.l-defaultSort a{
+    float: left;
+    display: block;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+.l-list{
+    width: 1155px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.l-list ul{
+    /*margin: 0 auto;*/
+}
+.l-list ul li{
+    width: 282px;
+    height: 343px;
+    float: left;
+    background: url(../images/l-listbg.png) center no-repeat;
+    overflow: hidden;
+}
+.l-list ul li div.active{
+    width: 282px;
+    height: 343px;
+    background: url(../images/l-hot.png) 197px 256px no-repeat;
+}
+.l-list ul li img{
+    width: 244px;
+    height: 220px;
+    display: block;
+    margin: 16px 16px 0 16px;
+}
+.l-list ul li h3{
+    width: 90%;
+    padding: 10px 25px 0;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
+    -webkit-text-overflow:ellipsis;
+}
+.l-list ul li div.l-l-detail{
+    padding: 10px 25px;
+    overflow: hidden;
+}
+.l-list ul li div.l-l-detail p.l-l-now-price{
+    width: 90px;
+    float: left;
+    color: #999999;
+}
+.l-list ul li div.l-l-detail p.l-l-now-price span{
+    color: #ff9933;
+    font-size: 32px;
+}
+.l-list ul li div.l-l-detail p.l-l-pre-price{
+    float: left;
+    color: #cccccc;
+    text-decoration: line-through;
+    font-size: 18px;
+    line-height: 48px;
+    margin-left: 10px;
+}

@@ -5,6 +5,7 @@
     overflow: hidden;
 }
 .banner div.swiper-wrapper,.banner div.swiper-slide,.banner div.swiper-container{
+    width: 100%;
     height: 600px;
 }
 .banner img{
@@ -12,6 +13,33 @@
     width: 100%;
     height: 600px;
 }
+
+.banner a.i-banner-lt{
+    width: 61px;
+    height: 61px;
+    position: absolute;
+    top: 50%;
+    /*margin-top: -35px;*/
+    left: 20%;
+    cursor: pointer;
+    z-index: 12;
+}
+.banner a.i-banner-lt img,.banner a.i-banner-rt img{
+    width: 61px;
+    height: 61px;
+    display: block;
+}
+.banner a.i-banner-rt{
+    width: 61px;
+    height: 61px;
+    position: absolute;
+    top: 50%;
+    /*margin-top: -35px;*/
+    right: 20%;
+    cursor: pointer;
+    z-index: 12;
+}
+
 .pagination{
     position: absolute;
     bottom: 30px;
