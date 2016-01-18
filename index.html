@@ -59,11 +59,11 @@
             <div class="m-pic-list">
                 <div class="swiper-container m-pic-list-in">
                 <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="images/i-lunbo-1.png"><p>德宝系列</p></div>
-                <div class="swiper-slide"><img src="images/i-lunbo-2.png"><p>城市系列</p></div>
-                <div class="swiper-slide"><img src="images/i-lunbo-3.png"><p>精灵系列</p></div>
-                <div class="swiper-slide"><img src="images/i-lunbo-3.png"><p>精灵系列</p></div>
-                <div class="swiper-slide"><img src="images/i-lunbo-3.png"><p>精灵系列</p></div>
+                <!--<div class="swiper-slide"><img src="images/i-lunbo-1.png"><p>德宝系列</p></div>-->
+                <!--<div class="swiper-slide"><img src="images/i-lunbo-2.png"><p>城市系列</p></div>-->
+                <!--<div class="swiper-slide"><img src="images/i-lunbo-3.png"><p>精灵系列</p></div>-->
+                <!--<div class="swiper-slide"><img src="images/i-lunbo-3.png"><p>精灵系列</p></div>-->
+                <!--<div class="swiper-slide"><img src="images/i-lunbo-3.png"><p>精灵系列</p></div>-->
                 </div>
             </div>
             </div>
@@ -144,31 +144,38 @@
 
 <script>
     $(function(){
+        $.getJSON('/api/goods/cates',function(res){
+            var cates = res.data;
+            $div = $('.m-pic-list .swiper-wrapper');
+            if(cates){
+                for(var i in cates){
+                    var cate = cates[i];
+                    $div.append('<div class="swiper-slide"><img style="width:280px;height:374px;" src="'+cate.icon+'"><p>'+cate["name"]+'</p></div>');
+                }
+                var mySwiper2 = new Swiper('.m-pic-list .swiper-container',{
+//                    loop: true,
+                    slidesPerView : 3,
+                    offsetSlidesAfter : 1,
+//                    onInit:function(swiper){
+//                        swiper.swipeNext();
+//                    }
+                    //其他设置
+                });
+                $("#i-pre").click(function(){
+                    mySwiper2.swipePrev();
+                });
+                $("#i-next").click(function(){
+                    mySwiper2.swipeNext();
+                });
+            }
+        });
+
         var mySwiper = new Swiper('.banner .swiper-container',{
             loop: true,
             pagination : '.banner .pagination',
             paginationClickable :true
-
-
             //其他设置
         });
-        var mySwiper2 = new Swiper('.m-pic-list .swiper-container',{
-            loop: true,
-            slidesPerView : 3,
-            offsetSlidesAfter : 1,
-            onInit:function(swiper){
-                swiper.swipeNext();
-            }
-
-            //其他设置
-        });
-        $("#i-pre").click(function(){
-            mySwiper2.swipePrev();
-        });
-        $("#i-next").click(function(){
-            mySwiper2.swipeNext();
-        });
-
     })
 </script>
     <script type="text/javascript" src="js/common.js"></script>
