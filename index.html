@@ -16,25 +16,12 @@
     <div class="header">
         <div class="h-in">
             <div class="h-logo"></div>
-            <!--<div class="h-head">-->
-                <!--<span class="h-h-img"><img src="images/hearder.png"></span>-->
-                <!--<a class="h-h-name">荷西</a>-->
-                <!--<ul class="h-h-nav-list" style="display: none;">-->
-                    <!--<li>个人中心</li>-->
-                    <!--<li>退出登录</li>-->
-                <!--</ul>-->
-            <!--</div>-->
             <div class="h-nav-list">
                 <ul>
-                    <!--<li><a href="#">免费试玩</a></li>-->
-                    <!--<li><a href="#">乐高回收</a></li>-->
-                    <li><a href="#">我要乐高</a></li>
+                    <li><a href="/list.html">我要乐高</a></li>
                     <li><a href="#">关于我们</a></li>
                 </ul>
-
             </div>
-
-
         </div>
     </div>
     <div class="banner">
@@ -53,7 +40,7 @@
     <div class="i-middle">
 
         <h3 class="i-m-tit">
-            <a href="#"></a>
+            <a href="/list.html"></a>
         </h3>
 
         <div class="i-m-switch">
@@ -61,18 +48,13 @@
             <div class="m-pic-list">
                 <div class="swiper-container m-pic-list-in">
                 <div class="swiper-wrapper">
-                <!--<div class="swiper-slide"><img src="images/i-lunbo-1.png"><p>德宝系列</p></div>-->
-                <!--<div class="swiper-slide"><img src="images/i-lunbo-2.png"><p>城市系列</p></div>-->
-                <!--<div class="swiper-slide"><img src="images/i-lunbo-3.png"><p>精灵系列</p></div>-->
-                <!--<div class="swiper-slide"><img src="images/i-lunbo-3.png"><p>精灵系列</p></div>-->
-                <!--<div class="swiper-slide"><img src="images/i-lunbo-3.png"><p>精灵系列</p></div>-->
                 </div>
             </div>
             </div>
             <a class="i-switch-lt" id="i-pre"><img src="images/prev.png"></a>
             <a class="i-switch-rt" id="i-next"><img src="images/next.png"></a>
         </div>
-        <a href="#" class="i-m-more">
+        <a href="/list.html" class="i-m-more">
             更多
         </a>
 
@@ -140,10 +122,6 @@
         <a class="float-top" href="#"></a>
     </div>
 
-    <!--<div class="buy-car">-->
-        <!--<a class="buy-car-click"></a>-->
-    <!--</div>-->
-
 <script>
     $(function(){
         $.getJSON('/api/goods/cates',function(res){
@@ -152,15 +130,12 @@
             if(cates){
                 for(var i in cates){
                     var cate = cates[i];
-                    $div.append('<div class="swiper-slide"><img src="'+cate.icon+'"><p>'+cate["name"]+'</p></div>');
+                    $div.append('<a href="/list.html?cate='+cate.id+'"><div class="swiper-slide"><img src="'+cate.icon+'"><p>'+cate.name+'</p></div></a>');
                 }
                 var mySwiper2 = new Swiper('.m-pic-list .swiper-container',{
 //                    loop: true,
                     slidesPerView : 3,
                     offsetSlidesAfter : 1,
-//                    onInit:function(swiper){
-//                        swiper.swipeNext();
-//                    }
                     //其他设置
                 });
                 $("#i-pre").click(function(){
@@ -173,7 +148,7 @@
         });
 
         var mySwiper = new Swiper('.banner .swiper-container',{
-            loop: true,
+//            loop: true,
             pagination : '.banner .pagination',
             paginationClickable :true
             //其他设置
