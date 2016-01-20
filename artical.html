@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>玩聚PC列表页</title>
+    <link href="css/common.css" rel="stylesheet" type="text/css">
+    <link href="css/artical.css" rel="stylesheet" type="text/css">
+    <link href="css/list.css" rel="stylesheet" type="text/css">
+    <link href="js/lib/skin/laypage.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/lib/common-Util.js"></script>
+    <script type="text/javascript" src="js/artical.js"></script>
+    <script type="text/javascript" src="js/lib/laypage.js"></script>
+
+</head>
+<body style="background-color: #f7f7f7;">
+
+<div class="header">
+    <div class="h-in">
+        <div class="h-logo"></div>
+        <div class="h-head">
+            <span class="h-h-img"><img src="images/hearder.png"></span>
+            <a class="h-h-name">荷西</a>
+            <ul class="h-h-nav-list" style="display: none;">
+                <li>个人中心</li>
+                <li>退出登录</li>
+            </ul>
+        </div>
+        <div class="h-nav-list">
+            <ul>
+                <!--<li><a href="#">免费试玩</a></li>-->
+                <!--<li><a href="#">乐高回收</a></li>-->
+                <li class="active"><a href="#">我要乐高</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+
+        </div>
+
+
+    </div>
+</div>
+
+<div class="h100"></div>
+<div class="a-contain">
+    <div class="a-d-twocode" style="display: none"><img src="images/qrcode_for_wjzz.jpg"></div>
+    <div class="a-title">
+
+        <h3>商品详情</h3>
+
+        <a>我要乐高</a>><a>商品详情</a>
+
+    </div>
+    <div class="a-details">
+
+        <div class="a-d-img">
+            <img src="images/a-goods.png" class="a-d-big-img">
+
+            <div class="a-d-img-list" id="_click">
+                <ul>
+                    <li><img src="images/a-pic-1.png" width="90" height="90" id="img"></li>
+                    <li><img src="images/a-pic-2.png" width="90" height="90"></li>
+                    <li><img src="images/a-pic-1.png" width="90" height="90"></li>
+                    <li><img src="images/a-pic-2.png" width="90" height="90"></li>
+                    <li><img src="images/a-pic-1.png" width="90" height="90"></li>
+                    <li><img src="images/a-pic-2.png" width="90" height="90"></li>
+                    <li><img src="images/a-pic-1.png" width="90" height="90"></li>
+                </ul>
+                <!--<a class="a-d-box" id="a-d-box"></a>-->
+            </div>
+            <a class="a-d-lt"><img src="images/a-left.png"></a>
+            <a class="a-d-rt"><img src="images/a-right.png"></a>
+        </div>
+        <div class="a-d-right">
+            <div class="a-d-r-1">
+                <h3>乐高 得宝主题系列 高塔</h3>
+                <span>有货</span>
+            </div>
+
+            <div class="a-d-r-2">
+                <p class="a-j-prePrice">
+                    <red>￥</red>
+                    <span>23</span>周
+                </p>
+                <p class="a-j-totalPrice">吊牌价:699</p>
+            </div>
+            <div class="a-d-r-3">
+                <p class="a-j-yajin">押金:200</p>
+
+                <p class="a-j-state">免运费</p>
+            </div>
+            <div>
+                <p>租租建议年龄:2-5岁</p>
+            </div>
+            <div>
+                <p>颗粒数:200</p>
+            </div>
+            <div class="a-d-r-5">
+                <b></b>
+
+                <p>赁两周后或续租都将按优惠价计算，时间越
+                    久越划算哦！</p>
+            </div>
+
+        </div>
+        <div class="a-d-button">
+            <button>立即租赁</button>
+
+        </div>
+
+    </div>
+
+    <div class="a-describe">
+        <div class="a-de-tab">
+            <ul>
+                <li class="active">商品描述</li>
+                <li>评论(<span>78</span>)</li>
+            </ul>
+        </div>
+
+        <div class="a-de-detail" style="display: block;">
+            <h3>品 牌：Lego      型 号：L10557 </h3>
+            <p>通过了不起的 3 合 1 乐高创意者探险车套装，享受土地、空气和水的冒险！拼砌坚固的越野车，欣赏其漂亮的绿白黑配色、超酷的工作绞车和挂钩机制、可以打开的车门、厚实的深纹轮胎、超高的挡泥板、结实的保险杠以及橙色警示灯。它甚至还有工具包和灭火器组件，再加上可拆卸的车顶和车门，看起来更有野外气派！坐上驾驶座，发动这辆重型车辆，驶过岩石、泥泞和崎岖小径！当你结束在野外的跋涉，可以将其重新拼砌成炫酷的气垫船或高速直升机，享受更多欢乐探险！</p>
+            <img src="images/a-eg-pic-1.png">
+            <img src="images/a-eg-pic-2.png">
+            <img src="images/a-eg-pic-3.png">
+        </div>
+
+        <div class="a-comment" style="display: none">
+            <ul>
+                <li>
+                    <div class="a-c-lf">
+                        <img src="images/a-comment-head.png">
+                        <p>荷西-sweety</p>
+                    </div>
+                    <div class="a-c-rt">
+                        <p>很好用，非常启发孩子的智力，没想到能用租的形式，非常赞！</p>
+                        <div class="a-c-pics">
+                            <img src="images/a-comment-pic.png">
+                            <img src="images/a-comment-pic.png">
+                            <img src="images/a-comment-pic.png">
+                            <img src="images/a-comment-pic.png">
+                        </div>
+                        <span class="a-c-date">2014-09-08  时长：3周</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="a-c-lf">
+                        <img src="images/a-comment-head.png">
+                        <p>荷西-sweety</p>
+                    </div>
+                    <div class="a-c-rt">
+                        <p>很好用，非常启发孩子的智力，没想到能用租的形式，非常赞！</p>
+                        <div class="a-c-pics">
+                            <img src="images/a-comment-pic.png">
+                            <img src="images/a-comment-pic.png">
+                            <img src="images/a-comment-pic.png">
+                            <img src="images/a-comment-pic.png">
+                        </div>
+                        <span class="a-c-date">2014-09-08  时长：3周</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="a-c-lf">
+                        <img src="images/a-comment-head.png">
+                        <p>荷西-sweety</p>
+                    </div>
+                    <div class="a-c-rt">
+                        <p>很好用，非常启发孩子的智力，没想到能用租的形式，非常赞！</p>
+                        <div class="a-c-pics">
+                            <img src="images/a-comment-pic.png">
+                            <img src="images/a-comment-pic.png">
+                            <img src="images/a-comment-pic.png">
+                            <img src="images/a-comment-pic.png">
+                        </div>
+                        <span class="a-c-date">2014-09-08  时长：3周</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="a-c-lf">
+                        <img src="images/a-comment-head.png">
+                        <p>荷西-sweety</p>
+                    </div>
+                    <div class="a-c-rt">
+                        <p>很好用，非常启发孩子的智力，没想到能用租的形式，非常赞！</p>
+                        <div class="a-c-pics">
+
+                        </div>
+                        <span class="a-c-date">2014-09-08  时长：3周</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="a-c-lf">
+                        <img src="images/a-comment-head.png">
+                        <p>荷西-sweety</p>
+                    </div>
+                    <div class="a-c-rt">
+                        <p>很好用，非常启发孩子的智力，没想到能用租的形式，非常赞！</p>
+                        <div class="a-c-pics">
+                            <img src="images/a-comment-pic.png">
+                            <img src="images/a-comment-pic.png">
+                            <img src="images/a-comment-pic.png">
+                            <img src="images/a-comment-pic.png">
+                        </div>
+                        <span class="a-c-date">2014-09-08  时长：3周</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="a-c-lf">
+                        <img src="images/a-comment-head.png">
+                        <p>荷西-sweety</p>
+                    </div>
+                    <div class="a-c-rt">
+                        <p>很好用，非常启发孩子的智力，没想到能用租的形式，非常赞！</p>
+                        <div class="a-c-pics">
+
+                        </div>
+                        <span class="a-c-date">2014-09-08  时长：3周</span>
+                    </div>
+                </li>
+                <li>
+                <div class="a-c-lf">
+                    <img src="images/a-comment-head.png">
+                    <p>荷西-sweety</p>
+                </div>
+                <div class="a-c-rt">
+                    <p>很好用，非常启发孩子的智力，没想到能用租的形式，非常赞！</p>
+                    <div class="a-c-pics">
+
+                    </div>
+                    <span class="a-c-date">2014-09-08  时长：3周</span>
+                </div>
+            </li>
+
+
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="a-same">
+        <div class="a-s-tab">
+            <p>同类推荐</p>
+            <a>换一批</a>
+        </div>
+
+
+        <div class="l-list">
+            <ul>
+                <li>
+                    <div class="l-l-in active">
+                        <img src="images/l-list.png">
+                        <h3>乐高 得宝主题系列 创意车辆组</h3>
+                        <div class="l-l-detail">
+                            <p class="l-l-now-price"><span>￥23</span>/周</p>
+                            <p class="l-l-pre-price">￥56/周</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="l-l-in active">
+                        <img src="images/l-list.png">
+                        <h3>乐高 得宝主题系列 创意车辆组</h3>
+                        <div class="l-l-detail">
+                            <p class="l-l-now-price"><span>￥23</span>/周</p>
+                            <p class="l-l-pre-price">￥56/周</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="l-l-in active">
+                        <img src="images/l-list.png">
+                        <h3>乐高 得宝主题系列 创意车辆组</h3>
+                        <div class="l-l-detail">
+                            <p class="l-l-now-price"><span>￥23</span>/周</p>
+                            <p class="l-l-pre-price">￥56/周</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="l-l-in active">
+                        <img src="images/l-list.png">
+                        <h3>乐高 得宝主题系列 创意车辆组</h3>
+                        <div class="l-l-detail">
+                            <p class="l-l-now-price"><span>￥23</span>/周</p>
+                            <p class="l-l-pre-price">￥56/周</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="footer">
+
+    <div class="footer-in">
+        <div class="footer-lf">
+            <p>Copyright © 2013 ChingeDesign Co,Ltd All Rights Reserved</p>
+
+            <p>版权所有 © 上海尚器设计创意有限公司 保留所有权利</p>
+
+            <p>沪ICP备11016142号</p>
+        </div>
+        <div class="footer-rt">
+            <ul>
+                <li>租赁流程</li>
+                <li>常见问题</li>
+                <li>联系我们</li>
+                <li>条款</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div class="con-float">
+    <a class="float-num">400-009-008</a>
+    <a class="float-phone"></a>
+    <a class="float-top"></a>
+</div>
+
+<div class="buy-car">
+    <a class="buy-car-click"></a>
+</div>
+
+<script type="text/javascript" src="js/common.js"></script>
+</body>
+</html>
