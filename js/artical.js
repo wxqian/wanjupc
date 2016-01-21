@@ -92,14 +92,14 @@ $(function () {
 
 function calPicList() {
     var _lenght = $(".a-d-img-list ul li").length,
-        _ulWidth = 100 * _lenght;
+        _ulWidth = 103 * _lenght;
     $(".a-d-img-list ul").css("width", _ulWidth);
 
     $(".a-d-lt").click(function () {
         var _left = Util.removePx($(".a-d-img-list ul").css("left"));
         if (_left > (-_ulWidth + 360)) {
             $(".a-d-img-list ul").stop().animate({
-                "left": _left - 100
+                "left": _left - 105
             })
         }
     });
@@ -108,7 +108,7 @@ function calPicList() {
         var _left = Util.removePx($(".a-d-img-list ul").css("left"));
         if (_left < 0) {
             $(".a-d-img-list ul").stop().animate({
-                "left": _left + 100
+                "left": _left + 105
             })
         }
     });

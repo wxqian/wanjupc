@@ -38,7 +38,7 @@
     border: 1px solid #95ae7b;
 }
 .a-d-img div.a-d-img-list{
-    width: 300px;
+    width: 304px;
     height: 96px;
     margin: 20px auto 0;
     overflow: hidden;
@@ -75,7 +75,8 @@
 }
 .a-d-img div.a-d-img-list ul li{
     float: left;
-    width: 90px;
+    width: 93px;
+    height: 92px;
     margin: 0 5px;
     border: 1px solid #86a468;
     cursor: pointer;

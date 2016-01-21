@@ -15,7 +15,7 @@
 
     <div class="header">
         <div class="h-in">
-            <div class="h-logo"></div>
+            <a href="index.html" class="h-logo"></a>
             <div class="h-nav-list">
                 <ul>
                     <li><a href="/list.html">我要乐高</a></li>
@@ -130,12 +130,11 @@
             if(cates){
                 for(var i in cates){
                     var cate = cates[i];
-                    $div.append('<a href="/list.html?cate='+cate.id+'"><div class="swiper-slide"><img src="'+cate.icon+'"><p>'+cate.name+'</p></div></a>');
+                    $div.append('<a href="/list.html?cate='+cate.id+'" class="swiper-slide"><div ><img src="'+cate.icon+'"><p>'+cate.name+'</p></div></a>');
                 }
                 var mySwiper2 = new Swiper('.m-pic-list .swiper-container',{
-//                    loop: true,
                     slidesPerView : 3,
-                    offsetSlidesAfter : 1,
+                    offsetSlidesAfter : 0
                     //其他设置
                 });
                 $("#i-pre").click(function(){

@@ -125,19 +125,19 @@
     /*font-size: 20px;*/
 /*}*/
 
-.i-middle .i-m-switch div.m-pic-list-in div.swiper-slide{
+.i-middle .i-m-switch div.m-pic-list-in a.swiper-slide{
     width: 348px!important;
     height: 482px;
     /*float: left;*/
     background: url("../images/i-lunbobg.png") center no-repeat;
 }
-.i-middle .i-m-switch div.m-pic-list-in div.swiper-slide img{
+.i-middle .i-m-switch div.m-pic-list-in a.swiper-slide img{
     display: block;
     margin: 30px auto 15px;
     width:280px;
     height:374px;
 }
-.i-middle .i-m-switch div.m-pic-list-in div.swiper-slide p{
+.i-middle .i-m-switch div.m-pic-list-in a.swiper-slide p{
     text-align: center;
     color: #666666;
     font-size: 20px;
