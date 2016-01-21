@@ -31,13 +31,14 @@
     float: left;
     font-size: 14px;
 }
-.l-tit div.l-search button.l-go-to-search{
+.l-tit div.l-search a.l-go-to-search{
     width: 55px;
     height: 55px;
     background: none;
     border: none;
     float: right;
     outline: none;
+    cursor:pointer;
 }
 .l-catena{
     width: 1210px;

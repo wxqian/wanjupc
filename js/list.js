@@ -83,13 +83,13 @@ function getGoods() {
                 var searchGoods = goods.data;
                 for (var i in searchGoods) {
                     var good = searchGoods[i];
-                    goodViews += '<li data="'+good.id+'"><div class="l-l-in"><img src="' + good.image + '"><h3>' + good.goodsBrand["name"] + ' ' + good.goodsCate["name"] + ' ' + good.title + '</h3>' +
+                    goodViews += '<li data="' + good.id + '"><div class="l-l-in"><img src="' + good.image + '"><h3 title="' + good.goodsBrand["name"] + ' ' + good.goodsCate["name"] + ' ' + good.title + '">' + good.goodsBrand["name"] + ' ' + good.goodsCate["name"] + ' ' + good.title + '</h3>' +
                         '<div class="l-l-detail"><p class="l-l-now-price"><span>￥' + good.nowPrice + '</span>/周</p><p class="l-l-pre-price">￥' + good.price + '</p>' +
                         '</div></div></li>';
                 }
                 $('.l-list ul').empty().append(goodViews);
-                $('.l-list ul li').click(function(){
-                    location.href = '/artical.html?id='+$(this).attr('data');
+                $('.l-list ul li').click(function () {
+                    location.href = '/artical.html?id=' + $(this).attr('data');
                 });
             }
         },
@@ -104,4 +104,15 @@ function search(id, type) {
         options[type] = id;
     }
     getGoods();
+}
+
+
+function searchTitle() {
+    var queryCode = $('#queryCode').val();
+    console.log(queryCode);
+    if (queryCode != "" && queryCode != undefined) {
+        location.href = '/search.html?title=' + queryCode;
+    } else {
+        alert('请输入您想要查找的玩具名称');
+    }
 }

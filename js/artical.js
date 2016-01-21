@@ -122,6 +122,10 @@ function calPicList() {
 function getComments(id, pageIndex) {
     $.getJSON('/api/goods/comment/' + id + '?pageIndex=' + pageIndex, function (res) {
         var comments = res.data.data;
+        if(comments.length == 0){
+            $('#comments ul').empty().append('此商品暂无评论');
+            return;
+        }
         var commentsView = '';
         $('#commentNum').html(res.data.total);
         laypage({
@@ -145,8 +149,6 @@ function getComments(id, pageIndex) {
                 commentsView +='<img src="'+comment.image+'">';
             }
             commentsView += '</div><span class="a-c-date">'+comment.createTime.substring(0,10)+'  时长：3周</span></div></li>';
-
-
         }
         $('#comments ul').empty().append(commentsView);
     });

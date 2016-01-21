@@ -8,7 +8,7 @@
     <link href="css/search.css" rel="stylesheet" type="text/css">
     <link href="js/lib/skin/laypage.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-    <script type="text/javascript" src="js/list.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>
 
 
 </head>
@@ -31,82 +31,60 @@
 
     <div class="l-tit s-tit-remove">
         <h3>搜索结果</h3>
+
         <div class="l-search">
             <form>
-                <input type="text" class="l-s-input" id="l-s-input" placeholder="请输入您想要查找的玩具名称">
-                <button class="l-go-to-search">
-                </button>
+                <input type="text" id="queryCode" class="l-s-input" id="l-s-input" placeholder="请输入您想要查找的玩具名称">
+                <a class="l-go-to-search" href="javascript:searchTitle();">
+                </a>
             </form>
         </div>
 
-        <div class="s-nav"><a>我要乐高</a>><a >搜索结果</a></div>
+        <div class="s-nav"><a>我要乐高</a>><a>搜索结果</a></div>
     </div>
-    <div class="s-none">
+    <div id="searchNone" class="s-none" style="display: none;">
         <div class="s-n-tit">
-            <p class="s-n-l">搜索:<span>迪尼</span></p>
+            <p class="s-n-l">搜索:<span id="searchTitle">迪尼</span></p>
+
             <p class="s-n-r">共0件相关商品</p>
         </div>
 
 
         <div class="s-n-detail">
             <b></b>
-            <p style="font-size: 22px; margin-top: 30px">啊哦～，租租没有找到与“迪尼”相关的产品哦。</p>
-            <p>别担心，下面是我们根据部分搜索词帮您找到的结果：<span class="s-n-j-name">迪士尼、迪士尼公主</span></p>
+
+            <p style="font-size: 22px; margin-top: 30px">啊哦～，租租没有找到与“<span id="title">迪尼</span>”相关的产品哦。</p>
+
+            <p>请重新搜索或<span class="s-n-j-name"><a href="/list.html">查看所有</a></span></p>
         </div>
     </div>
-
-    <div class="l-list" style="display: none;">
+    <div class="l-list s-same" id="recommend" style="display: none;">
+        <div class="s-s-top">
+            <h3>推荐商品</h3>
+        </div>
         <ul>
         </ul>
     </div>
 
-    <div class="l-list s-same">
+    <div class="l-list s-same" id="hot" style="display: none;">
         <div class="s-s-top">
-            <h3>迪尼斯公主</h3>
-            <p>共6件相关商品</p>
-            <a>查看全部</a>
+            <h3>热门商品</h3>
+            <a href="/list.html">查看全部</a>
         </div>
         <ul>
-            <li>
-                <div class="l-l-in active">
-                    <img src="images/l-list.png">
-                    <h3>乐高 得宝主题系列 创意车辆组</h3>
-                    <div class="l-l-detail">
-                        <p class="l-l-now-price"><span>￥23</span>/周</p>
-                        <p class="l-l-pre-price">￥56/周</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="l-l-in active">
-                    <img src="images/l-list.png">
-                    <h3>乐高 得宝主题系列 创意车辆组</h3>
-                    <div class="l-l-detail">
-                        <p class="l-l-now-price"><span>￥23</span>/周</p>
-                        <p class="l-l-pre-price">￥56/周</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="l-l-in active">
-                    <img src="images/l-list.png">
-                    <h3>乐高 得宝主题系列 创意车辆组</h3>
-                    <div class="l-l-detail">
-                        <p class="l-l-now-price"><span>￥23</span>/周</p>
-                        <p class="l-l-pre-price">￥56/周</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="l-l-in active">
-                    <img src="images/l-list.png">
-                    <h3>乐高 得宝主题系列 创意车辆组</h3>
-                    <div class="l-l-detail">
-                        <p class="l-l-now-price"><span>￥23</span>/周</p>
-                        <p class="l-l-pre-price">￥56/周</p>
-                    </div>
-                </div>
-            </li>
+
+        </ul>
+
+    </div>
+    <div class="l-list s-same" id="searchResult" style="display: none;">
+        <div class="s-s-top">
+            <h3 id="resultTitle"></h3>
+
+            <p>共<span id="goodsNum"></span>件相关商品</p>
+            <a href="/list.html">更多商品</a>
+        </div>
+        <ul>
+
         </ul>
 
     </div>
@@ -121,7 +99,9 @@
     <div class="footer-in">
         <div class="footer-lf">
             <p>Copyright © 2013 ChingeDesign Co,Ltd All Rights Reserved</p>
+
             <p>版权所有 © 上海尚器设计创意有限公司 保留所有权利</p>
+
             <p>沪ICP备11016142号</p>
         </div>
         <div class="footer-rt">
