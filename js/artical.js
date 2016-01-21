@@ -62,7 +62,7 @@ $(function () {
         }
         calPicList();
 
-        $('#title').html(info.goodsBrand.name + ' ' + info.goodsCate.name + ' ' + info.title);
+        $('#title').html(info.goodsBrand.name + ' ' + info.goodsCate.name + ' ' + info.title).attr('title',info.goodsBrand.name + ' ' + info.goodsCate.name + ' ' + info.title);
         $('#nowPrice').html(info.nowPrice);
         $('#price').html('吊牌价:' + info.price);
         var skus = info.skus;
@@ -87,7 +87,7 @@ $(function () {
         }
 
     });
-    getComments(id,0);
+    getComments(id, 0);
 });
 
 function calPicList() {
@@ -122,7 +122,7 @@ function calPicList() {
 function getComments(id, pageIndex) {
     $.getJSON('/api/goods/comment/' + id + '?pageIndex=' + pageIndex, function (res) {
         var comments = res.data.data;
-        if(comments.length == 0){
+        if (comments.length == 0) {
             $('#comments ul').empty().append('此商品暂无评论');
             return;
         }
@@ -132,7 +132,7 @@ function getComments(id, pageIndex) {
             cont: 'page1',
             pages: Math.ceil(res.total / options.pageSize), //可以叫服务端把总页数放在某一个隐藏域，再获取。假设我们获取到的是18
             skin: 'yahei', //加载内置皮肤，也可以直接赋值16进制颜色值，如:#c00
-            curr: 1,
+            curr: options.pageIndex + 1,
             jump: function (e, first) { //触发分页后的回调
                 if (!first) { //一定要加此判断，否则初始时会无限刷新
                     options.pageIndex = e.curr - 1;
@@ -140,15 +140,15 @@ function getComments(id, pageIndex) {
                 }
             }
         });
-        for(var i in comments){
+        for (var i in comments) {
             var comment = comments[i];
             console.log(comment);
-            commentsView += '<li><div class="a-c-lf"><img src="'+comment.memberInfo.image+'">'+
-                '<p>'+comment.memberInfo.name+'</p></div><div class="a-c-rt"><p>'+comment.content+'</p><div class="a-c-pics">';
-            if(comment.image){
-                commentsView +='<img src="'+comment.image+'">';
+            commentsView += '<li><div class="a-c-lf"><img src="' + comment.memberInfo.image + '">' +
+                '<p>' + comment.memberInfo.name + '</p></div><div class="a-c-rt"><p>' + comment.content + '</p><div class="a-c-pics">';
+            if (comment.image) {
+                commentsView += '<img src="' + comment.image + '">';
             }
-            commentsView += '</div><span class="a-c-date">'+comment.createTime.substring(0,10)+'  时长：3周</span></div></li>';
+            commentsView += '</div><span class="a-c-date">' + comment.createTime.substring(0, 10) + '  时长：3周</span></div></li>';
         }
         $('#comments ul').empty().append(commentsView);
     });
