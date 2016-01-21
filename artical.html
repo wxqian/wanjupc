@@ -215,6 +215,7 @@
 
 
             </ul>
+            <div id="page1" style="text-align: center; margin: 20px 0"></div>
         </div>
 
     </div>
@@ -303,6 +304,19 @@
     <a class="float-phone"></a>
     <a class="float-top"></a>
 </div>
-6v<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script>
+    laypage({
+        cont: 'page1',
+        pages: 8, //可以叫服务端把总页数放在某一个隐藏域，再获取。假设我们获取到的是18
+        skin: 'yahei', //加载内置皮肤，也可以直接赋值16进制颜色值，如:#c00
+        curr: 1,
+        jump: function (e, first) { //触发分页后的回调
+            if (!first) { //一定要加此判断，否则初始时会无限刷新
+                options.page = e.curr;
+            }
+        }
+    });
+</script>
 </body>
 </html>
