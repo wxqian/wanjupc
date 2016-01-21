@@ -114,6 +114,7 @@
     float: left;
     background: url(../images/l-listbg.png) center no-repeat;
     overflow: hidden;
+    cursor: pointer;
 }
 .l-list ul li div.active{
     width: 282px;

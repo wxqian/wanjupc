@@ -83,11 +83,14 @@ function getGoods() {
                 var searchGoods = goods.data;
                 for (var i in searchGoods) {
                     var good = searchGoods[i];
-                    goodViews += '<li><div class="l-l-in"><img src="' + good.image + '"><h3>' + good.goodsBrand["name"] + ' ' + good.goodsCate["name"] + ' ' + good.title + '</h3>' +
+                    goodViews += '<li data="'+good.id+'"><div class="l-l-in"><img src="' + good.image + '"><h3>' + good.goodsBrand["name"] + ' ' + good.goodsCate["name"] + ' ' + good.title + '</h3>' +
                         '<div class="l-l-detail"><p class="l-l-now-price"><span>￥' + good.nowPrice + '</span>/周</p><p class="l-l-pre-price">￥' + good.price + '</p>' +
                         '</div></div></li>';
                 }
                 $('.l-list ul').empty().append(goodViews);
+                $('.l-list ul li').click(function(){
+                    location.href = '/artical.html?id='+$(this).attr('data');
+                });
             }
         },
         error: function (res) {
