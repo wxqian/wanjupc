@@ -54,16 +54,16 @@
         </div>
         <div class="a-d-right">
             <div class="a-d-r-1">
-                <h3>乐高 得宝主题系列 高塔</h3>
+                <h3 id="title"></h3>
                 <span>有货</span>
             </div>
 
             <div class="a-d-r-2">
                 <p class="a-j-prePrice">
                     <red>￥</red>
-                    <span>23</span>周
+                    <span id="nowPrice"></span>/周
                 </p>
-                <p class="a-j-totalPrice">吊牌价:699</p>
+                <p class="a-j-totalPrice" id="price"></p>
             </div>
             <div class="a-d-r-3">
                 <p class="a-j-yajin">押金:200</p>
@@ -71,10 +71,10 @@
                 <p class="a-j-state">免运费</p>
             </div>
             <div>
-                <p>租租建议年龄:2-5岁</p>
+                <p id="ages"></p>
             </div>
             <div>
-                <p>颗粒数:200</p>
+                <p>颗粒数:<span id="numbers"></span></p>
             </div>
             <div class="a-d-r-5">
                 <b></b>
@@ -95,125 +95,18 @@
         <div class="a-de-tab">
             <ul>
                 <li class="active">商品描述</li>
-                <li>评论(<span>78</span>)</li>
+                <li>评论(<span id="commentNum">0</span>)</li>
             </ul>
         </div>
 
         <div class="a-de-detail" style="display: block;">
-            <h3>品 牌：Lego      型 号：L10557 </h3>
-            <p>通过了不起的 3 合 1 乐高创意者探险车套装，享受土地、空气和水的冒险！拼砌坚固的越野车，欣赏其漂亮的绿白黑配色、超酷的工作绞车和挂钩机制、可以打开的车门、厚实的深纹轮胎、超高的挡泥板、结实的保险杠以及橙色警示灯。它甚至还有工具包和灭火器组件，再加上可拆卸的车顶和车门，看起来更有野外气派！坐上驾驶座，发动这辆重型车辆，驶过岩石、泥泞和崎岖小径！当你结束在野外的跋涉，可以将其重新拼砌成炫酷的气垫船或高速直升机，享受更多欢乐探险！</p>
-            <img src="images/a-eg-pic-1.png">
-            <img src="images/a-eg-pic-2.png">
-            <img src="images/a-eg-pic-3.png">
+            <h3>品 牌：Lego 型 号：<span id="goodType"></span></h3>
+
+            <div id="goodDesc"></div>
         </div>
 
-        <div class="a-comment" style="display: none">
+        <div id="comments" class="a-comment" style="display: none">
             <ul>
-                <li>
-                    <div class="a-c-lf">
-                        <img src="images/a-comment-head.png">
-                        <p>荷西-sweety</p>
-                    </div>
-                    <div class="a-c-rt">
-                        <p>很好用，非常启发孩子的智力，没想到能用租的形式，非常赞！</p>
-                        <div class="a-c-pics">
-                            <img src="images/a-comment-pic.png">
-                            <img src="images/a-comment-pic.png">
-                            <img src="images/a-comment-pic.png">
-                            <img src="images/a-comment-pic.png">
-                        </div>
-                        <span class="a-c-date">2014-09-08  时长：3周</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="a-c-lf">
-                        <img src="images/a-comment-head.png">
-                        <p>荷西-sweety</p>
-                    </div>
-                    <div class="a-c-rt">
-                        <p>很好用，非常启发孩子的智力，没想到能用租的形式，非常赞！</p>
-                        <div class="a-c-pics">
-                            <img src="images/a-comment-pic.png">
-                            <img src="images/a-comment-pic.png">
-                            <img src="images/a-comment-pic.png">
-                            <img src="images/a-comment-pic.png">
-                        </div>
-                        <span class="a-c-date">2014-09-08  时长：3周</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="a-c-lf">
-                        <img src="images/a-comment-head.png">
-                        <p>荷西-sweety</p>
-                    </div>
-                    <div class="a-c-rt">
-                        <p>很好用，非常启发孩子的智力，没想到能用租的形式，非常赞！</p>
-                        <div class="a-c-pics">
-                            <img src="images/a-comment-pic.png">
-                            <img src="images/a-comment-pic.png">
-                            <img src="images/a-comment-pic.png">
-                            <img src="images/a-comment-pic.png">
-                        </div>
-                        <span class="a-c-date">2014-09-08  时长：3周</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="a-c-lf">
-                        <img src="images/a-comment-head.png">
-                        <p>荷西-sweety</p>
-                    </div>
-                    <div class="a-c-rt">
-                        <p>很好用，非常启发孩子的智力，没想到能用租的形式，非常赞！</p>
-                        <div class="a-c-pics">
-
-                        </div>
-                        <span class="a-c-date">2014-09-08  时长：3周</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="a-c-lf">
-                        <img src="images/a-comment-head.png">
-                        <p>荷西-sweety</p>
-                    </div>
-                    <div class="a-c-rt">
-                        <p>很好用，非常启发孩子的智力，没想到能用租的形式，非常赞！</p>
-                        <div class="a-c-pics">
-                            <img src="images/a-comment-pic.png">
-                            <img src="images/a-comment-pic.png">
-                            <img src="images/a-comment-pic.png">
-                            <img src="images/a-comment-pic.png">
-                        </div>
-                        <span class="a-c-date">2014-09-08  时长：3周</span>
-                    </div>
-                </li>
-                <li>
-                    <div class="a-c-lf">
-                        <img src="images/a-comment-head.png">
-                        <p>荷西-sweety</p>
-                    </div>
-                    <div class="a-c-rt">
-                        <p>很好用，非常启发孩子的智力，没想到能用租的形式，非常赞！</p>
-                        <div class="a-c-pics">
-
-                        </div>
-                        <span class="a-c-date">2014-09-08  时长：3周</span>
-                    </div>
-                </li>
-                <li>
-                <div class="a-c-lf">
-                    <img src="images/a-comment-head.png">
-                    <p>荷西-sweety</p>
-                </div>
-                <div class="a-c-rt">
-                    <p>很好用，非常启发孩子的智力，没想到能用租的形式，非常赞！</p>
-                    <div class="a-c-pics">
-
-                    </div>
-                    <span class="a-c-date">2014-09-08  时长：3周</span>
-                </div>
-            </li>
-
-
             </ul>
             <div id="page1" style="text-align: center; margin: 20px 0"></div>
         </div>
@@ -223,52 +116,12 @@
     <div class="a-same">
         <div class="a-s-tab">
             <p>同类推荐</p>
-            <a>换一批</a>
         </div>
 
 
-        <div class="l-list">
+        <div class="l-list" id="related">
             <ul>
-                <li>
-                    <div class="l-l-in active">
-                        <img src="images/l-list.png">
-                        <h3>乐高 得宝主题系列 创意车辆组</h3>
-                        <div class="l-l-detail">
-                            <p class="l-l-now-price"><span>￥23</span>/周</p>
-                            <p class="l-l-pre-price">￥56/周</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="l-l-in active">
-                        <img src="images/l-list.png">
-                        <h3>乐高 得宝主题系列 创意车辆组</h3>
-                        <div class="l-l-detail">
-                            <p class="l-l-now-price"><span>￥23</span>/周</p>
-                            <p class="l-l-pre-price">￥56/周</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="l-l-in active">
-                        <img src="images/l-list.png">
-                        <h3>乐高 得宝主题系列 创意车辆组</h3>
-                        <div class="l-l-detail">
-                            <p class="l-l-now-price"><span>￥23</span>/周</p>
-                            <p class="l-l-pre-price">￥56/周</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="l-l-in active">
-                        <img src="images/l-list.png">
-                        <h3>乐高 得宝主题系列 创意车辆组</h3>
-                        <div class="l-l-detail">
-                            <p class="l-l-now-price"><span>￥23</span>/周</p>
-                            <p class="l-l-pre-price">￥56/周</p>
-                        </div>
-                    </div>
-                </li>
+
             </ul>
 
         </div>
@@ -305,18 +158,5 @@
     <a class="float-top"></a>
 </div>
 <script type="text/javascript" src="js/common.js"></script>
-<script>
-    laypage({
-        cont: 'page1',
-        pages: 8, //可以叫服务端把总页数放在某一个隐藏域，再获取。假设我们获取到的是18
-        skin: 'yahei', //加载内置皮肤，也可以直接赋值16进制颜色值，如:#c00
-        curr: 1,
-        jump: function (e, first) { //触发分页后的回调
-            if (!first) { //一定要加此判断，否则初始时会无限刷新
-                options.page = e.curr;
-            }
-        }
-    });
-</script>
 </body>
 </html>
