@@ -17,7 +17,7 @@ $(function () {
         var cates = res.data;
         for (var i in cates) {
             var _cate = cates[i];
-            $(".l-c-sub").append('<a data-id="' + _cate["id"] + '">' + _cate["name"] + '</a>');
+            $(".l-c-sub").append('<a href="javascript:search(' + _cate["id"] + ',\'cate\');">' + _cate["name"] + '</a>');
             if (cate && cate[1] == _cate.id) {
                 $(".l-catena").find(".active").removeClass("active");
                 $('.l-catena a:last').addClass("active");
@@ -32,7 +32,7 @@ $(function () {
         var ages = res.data;
         for (var i in ages) {
             var age = ages[i];
-            $(".l-a-sub").append('<a data-id="' + age["id"] + '">' + age["name"] + '</a>');
+            $(".l-a-sub").append('<a href="javascript:search(' + age["id"] + ',\'age\');">' + age["name"] + '</a>');
         }
         $(".l-ages a").click(function () {
             $(".l-ages").find(".active").removeClass("active");
@@ -49,10 +49,9 @@ $(function () {
 
 function getGoods() {
     var conditions = {
-        pageIndex: options.page-1,
+        pageIndex: options.page - 1,
         pageSize: 20
     };
-    console.log(conditions.pageIndex);
     for (var i in options) {
         if (i != 'page' && options[i] != undefined) {
             conditions[i] = options[i];
@@ -77,25 +76,29 @@ function getGoods() {
                     }
                 }
             });
-            if(goods.total == 0){
+            if (goods.total == 0) {
                 //无商品处理
-            }else{
-                var goodViews ;
+            } else {
+                var goodViews = '';
                 var searchGoods = goods.data;
-                for(var i in searchGoods){
+                for (var i in searchGoods) {
                     var good = searchGoods[i];
-                    goodViews += '<li><div class="l-l-in"><img src="'+good.image+'"><h3>'+good.goodsBrand["name"]+' '+good.goodsCate["name"]+' '+good.title+'</h3>'+
-                        '<div class="l-l-detail"><p class="l-l-now-price"><span>￥'+good.nowPrice+'</span>/周</p><p class="l-l-pre-price">￥'+good.price+'</p>'+
+                    goodViews += '<li><div class="l-l-in"><img src="' + good.image + '"><h3>' + good.goodsBrand["name"] + ' ' + good.goodsCate["name"] + ' ' + good.title + '</h3>' +
+                        '<div class="l-l-detail"><p class="l-l-now-price"><span>￥' + good.nowPrice + '</span>/周</p><p class="l-l-pre-price">￥' + good.price + '</p>' +
                         '</div></div></li>';
                 }
                 $('.l-list ul').empty().append(goodViews);
             }
         },
         error: function (res) {
-
         }
-
-
     });
-
+}
+function search(id, type) {
+    if (id == -1) {
+        options[type] = undefined;
+    } else {
+        options[type] = id;
+    }
+    getGoods();
 }
