@@ -99,9 +99,13 @@
     margin-bottom: 10px!important;
 }
 .a-d-right div.a-d-r-1 h3{
+    max-width: 390px;
     color: #336600;
     font-size: 26px;
     float: left;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
 }
 .a-d-right div.a-d-r-1 span{
     display: block;
